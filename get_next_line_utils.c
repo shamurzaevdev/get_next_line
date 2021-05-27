@@ -6,7 +6,7 @@
 /*   By: ashamurz <ashamurz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/14 16:51:28 by ashamurz          #+#    #+#             */
-/*   Updated: 2021/05/14 18:10:37 by ashamurz         ###   ########.fr       */
+/*   Updated: 2021/05/25 18:59:59 by ashamurz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 size_t	ft_strlen(const char *str)
 {
 	size_t	i;
+
 	i = 0;
 	while (str[i] != '\0')
 	{
@@ -28,6 +29,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t		i;
 	size_t		len_s2;
 	char		*dest;
+
 	if (!s1 || !s2)
 		return (NULL);
 	i = ft_strlen(s1);
@@ -47,11 +49,13 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	dest[i] = '\0';
 	return (dest);
 }
+
 char	*ft_strdup(const char *src)
 {
 	size_t	i;
 	size_t	len;
 	char	*dest;
+
 	len = ft_strlen((char *)src);
 	if (src == NULL)
 		return (NULL);
@@ -67,10 +71,12 @@ char	*ft_strdup(const char *src)
 	dest[i] = '\0';
 	return (dest);
 }
+
 char	*ft_substr(char *s, unsigned int start, size_t len)
 {
 	char	*dest;
 	size_t	i;
+
 	i = 0;
 	if (!s)
 		return (NULL);
@@ -87,9 +93,11 @@ char	*ft_substr(char *s, unsigned int start, size_t len)
 	dest[i] = '\0';
 	return (dest);
 }
+
 char	*ft_strchr(const char *str, int c)
 {
 	int	i;
+
 	i = 0;
 	while (str[i] != '\0')
 	{
